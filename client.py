@@ -12,7 +12,7 @@ def receive_messages(sock):
         try:
             message = sock.recv(1024).decode('utf-8')
             clear_last_line()  # Очищаем строку ввода
-            print(f"{message}")  # Новое сообщение с новой строки
+            print(f"\n{message}")  # Новое сообщение с новой строки
             sys.stdout.write("Ваше сообщение: ")  # Восстанавливаем приглашение
             sys.stdout.flush()
         except:
